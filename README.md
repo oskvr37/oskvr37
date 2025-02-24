@@ -1,5 +1,5 @@
 # Hi, I'm Oskar 👋
-Self-taught software developer
+Self-taught software developer, [contact me!](mailto:osk.dudzinski@gmail.com)
 
 ![next.js badge](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![tailwindcss badge](https://img.shields.io/badge/tailwindcss-000000?style=for-the-badge&logo=tailwind-css&logoColor=white)
