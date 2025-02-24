@@ -6,3 +6,6 @@ Self-taught software developer
 ![typescript badge](https://img.shields.io/badge/typescript-000000?style=for-the-badge&logo=typescript&logoColor=white)
 ![postgreSQL badge](https://img.shields.io/badge/postgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=white)
 ![python badge](https://img.shields.io/badge/python-000000?style=for-the-badge&logo=python&logoColor=white)
+
+![oskvr37 GitHub stats](https://github-readme-stats.vercel.app/api?username=oskvr37&show_icons=true&theme=midnight-purple)
+![oskvr37 top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=oskvr37&layout=compact&theme=midnight-purple)
