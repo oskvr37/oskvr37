@@ -1,0 +1,53 @@
+---
+import "@/styles/blog.css";
+
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BaseHead from "@/components/BaseHead.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: post,
+  }));
+}
+
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout>
+  <BaseHead
+    title={`${post.data.title} | Oskar Dudziński`}
+    description={post.data.description}
+    slot="head"
+  />
+  <main class="space-y-4">
+    <section class="font-mono lowercase text-slate-400 max-sm:text-sm">
+      <div
+        class="sm:flex justify-between items-center gap-2 text-nowrap select-none"
+      >
+        <nav class="max-sm:flex flex-wrap gap-x-2">
+          <a class="link" href="/">home</a>
+          <span>&gt;</span>
+          <a class="link" href="/blog">blog</a>
+          &gt;
+          <span transition:name={`blog_title-${post.id}`}>
+            {post.data.title}
+          </span>
+        </nav>
+        <div class="max-sm:hidden bg-slate-600 w-full h-[1px]"></div>
+        <span transition:name={`blog_date-${post.id}`}>
+          <FormattedDate date={post.data.pubDate} />
+        </span>
+      </div>
+    </section>
+    <article class="space-y-2">
+      <Content />
+    </article>
+  </main>
+</BaseLayout>

@@ -1,0 +1,53 @@
+@reference "@/styles/global.css";
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+p {
+  @apply leading-6;
+}
+
+ol,
+ul {
+  @apply list-inside marker:text-slate-400;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+ul {
+  @apply list-disc;
+}
+
+li > ul {
+  @apply pl-2;
+}
+
+kbd {
+  @apply text-xs px-1 py-0.5 bg-slate-900 border border-slate-800 rounded-md;
+}
+
+.astro-code {
+  @apply font-mono text-sm;
+  @apply p-2 sm:p-4 rounded-md;
+
+  @apply bg-slate-900!;
+  @apply border border-slate-800;
+}

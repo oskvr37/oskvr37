@@ -1,0 +1,21 @@
+{
+  "name": "website",
+  "author": "oskvr37",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.5",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.6.0",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.13.8",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.13"
+  }
+}

@@ -1,0 +1,21 @@
+---
+import { version, author, name } from "@/../package.json";
+
+const year = new Date().getFullYear();
+---
+
+<footer
+  transition:name="ui_footer"
+  class="font-mono text-sm text-slate-400 font-light text-nowrap select-none"
+>
+  <div class="flex justify-between items-center gap-2">
+    <a href="https://github.com/oskvr37" class="link" target="_blank">
+      &copy; {year}
+      {author}
+    </a>
+    <div class="bg-slate-600 w-full h-[1px]"></div>
+    <span>
+      {name} v{version}
+    </span>
+  </div>
+</footer>
