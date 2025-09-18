@@ -11,7 +11,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://oskvr37.github.io",
+  site: "https://oskvr37.github.io/oskvr37",
   integrations: [mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
