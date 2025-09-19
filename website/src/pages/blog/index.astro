@@ -34,17 +34,18 @@ const posts = (await getCollection("blog")).sort(
                     {post.data.title}.md
                   </span>
                 </h2>
-                {/* <div class="bg-slate-600 w-full h-[1px]" /> */}
-                <span class="max-sm:hidden">
+                <div class="max-sm:hidden">
                   {post.body && (
                     <span>{(post.body.length / 256).toFixed(2)} kb</span>
                   )}
                   //
-                  <FormattedDate
-                    transition:name={`blog_date-${post.id}`}
-                    date={post.data.pubDate}
-                  />
-                </span>
+                  <span transition:name={`blog_date-${post.id}`}>
+                    <FormattedDate
+                      transition:name={`blog_date-${post.id}`}
+                      date={post.data.pubDate}
+                    />
+                  </span>
+                </div>
               </a>
             </li>
           ))
