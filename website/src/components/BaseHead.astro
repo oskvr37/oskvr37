@@ -9,12 +9,11 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const default_title = "Oskar Dudziński - Web Developer";
-const default_description = "";
+const default_description =
+  "I am a professional web developer specializing in modern, responsive, and SEO-friendly websites.";
 
-const {
-  title = default_title,
-  description = default_description,
-} = Astro.props;
+const { title = default_title, description = default_description } =
+  Astro.props;
 ---
 
 <!-- Global Metadata -->
