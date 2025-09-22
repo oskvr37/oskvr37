@@ -46,7 +46,7 @@ kbd {
 }
 
 .astro-code {
-  @apply font-mono text-sm;
+  @apply text-sm;
   @apply p-2 sm:p-4 rounded-md;
 
   @apply bg-slate-900!;

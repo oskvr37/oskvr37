@@ -39,7 +39,7 @@ const year_projects: YearProjects = projects.reduce(
                     target="_blank"
                     class="grow pt-1 pb-6 block space-y-3 group"
                   >
-                    <h3 class="font-mono text-sm font-medium">
+                    <h3 class="text-sm font-medium">
                       {project.name}{" "}
                       {project.version && (
                         <span class="text-slate-300 font-light">
@@ -47,13 +47,13 @@ const year_projects: YearProjects = projects.reduce(
                         </span>
                       )}
                     </h3>
-                    <p class="font-mono text-sm text-slate-400 group-hover:text-slate-200 transition-colors">
+                    <p class="text-sm text-slate-400 group-hover:text-slate-200 transition-colors">
                       {project.description}
                     </p>
                     <div class="flex gap-x-2">
                       {project.tech_stack.map((tech) => {
                         return (
-                          <span class="text-xs font-mono font-light border border-slate-800 text-slate-300 bg-slate-900 rounded-full px-2 py-0.5">
+                          <span class="text-xs font-light border border-slate-800 text-slate-300 bg-slate-900 rounded-full px-2 py-0.5">
                             {tech}
                           </span>
                         );
