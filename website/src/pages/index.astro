@@ -5,8 +5,9 @@ import Projects from "@/components/Projects.astro";
 
 <BaseLayout>
   <main class="space-y-4">
-    <section class="text-slate-400 max-sm:text-sm select-none">
+    <section class="text-slate-400 max-sm:text-sm select-none hidden">
       <div class="flex justify-between items-center gap-2">
+        <!-- TODO make the nav a component and pass links as array -->
         <nav class="flex gap-2">
           <a class="link" href="/oskvr37/">home</a>
           <span>&bull;</span>
@@ -18,17 +19,31 @@ import Projects from "@/components/Projects.astro";
         <span class="text-nowrap">oskar dudziński</span>
       </div>
     </section>
-    <section class="space-y-2 py-4">
-      <h1 class="text-2xl font-light">
-        <span> Oskar Dudziński </span>
+    <section class="space-y-4">
+      <h1 class="text-2xl font-medium">
+        Oskar Dudziński
+        <span class="block mt-1 text-slate-300 font-light">
+          Fullstack Web Developer
+        </span>
       </h1>
-      <p class="leading-8">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        aliquid pariatur deserunt explicabo, autem mollitia voluptatum
-        obcaecati, qui sapiente reiciendis incidunt ullam sequi quis
-        consequuntur culpa debitis! Quia, iure enim!
-      </p>
+      <div class="leading-7 text-sm font-light text-slate-300 max-w-[80ch]">
+        <p>
+          Self-taught developer with hands-on experience creating responsive,
+          interactive&nbsp;web&nbsp;applications and&nbsp;high-performance
+          websites.
+        </p>
+        <p>
+          I work with TypeScript, React, Next.js, Astro, and&nbsp;TailwindCSS
+          to&nbsp;build fast and&nbsp;maintainable projects.
+        </p>
+      </div>
+    </section>
+    <section>
+      <!-- TODO socials & contact -->
     </section>
     <Projects />
+    <section>
+      <!-- TODO check out my blog -->
+    </section>
   </main>
 </BaseLayout>
