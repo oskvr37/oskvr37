@@ -25,10 +25,6 @@ header {
   @apply mx-auto max-w-[var(--page-width)] p-2;
 }
 
-p {
-  @apply text-slate-300 font-light;
-}
-
 .link {
   @apply hover:underline;
 }

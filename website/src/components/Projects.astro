@@ -1,0 +1,70 @@
+---
+import { projects, type Project } from "@/lib/projects";
+
+type YearProjects = Record<string, Project[]>;
+
+const year_projects: YearProjects = projects.reduce(
+  (year_projects, project) => {
+    if (!year_projects[project.year]) {
+      year_projects[project.year] = [];
+    }
+    year_projects[project.year].push(project);
+    return year_projects;
+  },
+  {} as YearProjects
+);
+---
+
+<section>
+  {
+    Object.entries(year_projects)
+      .sort((a, b) => Number(b[0]) - Number(a[0]))
+      .map(([year, projects]) => {
+        return (
+          <>
+            <date class="block ps-2 mb-4 mt-6 text-xs uppercase text-slate-400 pointer-events-none select-none">
+              {year}
+            </date>
+
+            {projects.map((project) => {
+              return (
+                <article class="flex gap-x-3">
+                  <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-500">
+                    <div class="relative z-10 size-7 flex justify-center items-center">
+                      <div class="size-2 rounded-full bg-slate-500" />
+                    </div>
+                  </div>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    class="grow pt-1 pb-6 block space-y-3 group"
+                  >
+                    <h3 class="font-mono text-sm font-medium">
+                      {project.name}{" "}
+                      {project.version && (
+                        <span class="text-slate-300 font-light">
+                          // {project.version}
+                        </span>
+                      )}
+                    </h3>
+                    <p class="font-mono text-sm text-slate-400 group-hover:text-slate-200 transition-colors">
+                      {project.description}
+                    </p>
+                    <div class="flex gap-x-2">
+                      {project.tech_stack.map((tech) => {
+                        return (
+                          <span class="text-xs font-mono font-light border border-slate-800 text-slate-300 bg-slate-900 rounded-full px-2 py-0.5">
+                            {tech}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  </a>
+                </article>
+              );
+            })}
+          </>
+        );
+      })
+  }
+</section>
